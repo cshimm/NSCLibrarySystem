@@ -54,4 +54,11 @@ public class NSCLibraryTest {
         container.add(magazine);
         container.display();
     }
+
+    @Test
+    void test_nscUtils() {
+        NSCMediaUtils.printMediaDetails(book);
+        NSCMediaUtils.printMediaDetails(dvd);
+        NSCMediaUtils.printMediaDetails(magazine);
+    }
 }
