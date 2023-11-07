@@ -1,10 +1,12 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class NSCLibraryTest {
     Book book = new Book("Book1", "Author1", "1234", true);
-    DVD dvd = new DVD("DVD1", "1", "Genre1", true);
+    DVD dvd = new DVD("DVD1", "1", "Genre1", false);
     Magazine magazine = new Magazine("Magazine1", 1, 11, true);
 
     @Test
@@ -39,6 +41,7 @@ public class NSCLibraryTest {
         boolean result = container.remove(book);
         assertFalse(result);
     }
+
     @Test
     void test_addItem() {
         NSCLibraryMediaContainer<Media> container = new NSCLibraryMediaContainer<>();
@@ -48,6 +51,7 @@ public class NSCLibraryTest {
 
     @Test
     void test_display() {
+        System.out.println("********** test_display **********");
         NSCLibraryMediaContainer<Media> container = new NSCLibraryMediaContainer<>();
         container.add(book);
         container.add(dvd);
@@ -56,7 +60,8 @@ public class NSCLibraryTest {
     }
 
     @Test
-    void test_nscUtils() {
+    void test_printMediaDetails() {
+        System.out.println("********** test_printMediaDetails **********");
         NSCMediaUtils.printMediaDetails(book);
         NSCMediaUtils.printMediaDetails(dvd);
         NSCMediaUtils.printMediaDetails(magazine);

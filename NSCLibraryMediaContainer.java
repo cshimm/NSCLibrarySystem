@@ -14,7 +14,7 @@ public class NSCLibraryMediaContainer<T extends Media> {
 
     /**
      * @param item The media item to add
-     * @return A boolean indicating if the item was successfully added to the array
+     * @return A boolean indicating if the item was successfully added to the array.
      */
     boolean add(T item) {
         return mediaItems.add(item);
@@ -22,14 +22,14 @@ public class NSCLibraryMediaContainer<T extends Media> {
 
     /**
      * @param item The media item to remove
-     * @return A boolean indicating whether the removal from the array was successful or not
+     * @return A boolean indicating whether the removal from the array was successful or not.
      */
     boolean remove(T item) {
         return mediaItems.remove(item);
     }
 
     /**
-     * Displays each item in the console
+     * Displays each item in the console.
      */
     void display() {
         for (T item : mediaItems) {
